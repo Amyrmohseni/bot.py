@@ -11,7 +11,7 @@ from telegram.ext import (
 )
 
 TOKEN = "YOUR_NEW_TOKEN_HERE"
-CHANNEL = "@vibesof23"
+CHANNEL = "@rijdhuridjiediueuhsnjdjiwpphd"
 
 # برای Render
 web = Flask(__name__)
