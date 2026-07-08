@@ -9,7 +9,7 @@ from telegram.ext import (
 )
 
 TOKEN = "8800531130:AAErJJEeqldQi2GdsnLoovEyk6qRnQgzYMo"
-CHANNEL = "@vibesof23"
+CHANNEL = "@rijdhuridjiediueuhsnjdjiwpphd"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
