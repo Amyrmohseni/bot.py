@@ -10,7 +10,7 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "YOUR_NEW_TOKEN_HERE"
+TOKEN = "8800531130:AAErJJEeqldQi2GdsnLoovEyk6qRnQgzYMo"
 CHANNEL = "@rijdhuridjiediueuhsnjdjiwpphd"
 
 # برای Render
