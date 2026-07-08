@@ -1,4 +1,6 @@
 import asyncio
+import threading
+from flask import Flask
 from telegram import Update
 from telegram.ext import (
     Application,
@@ -8,8 +10,21 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "8800531130:AAErJJEeqldQi2GdsnLoovEyk6qRnQgzYMo"
-CHANNEL = "@rijdhuridjiediueuhsnjdjiwpphd"
+TOKEN = "YOUR_NEW_TOKEN_HERE"
+CHANNEL = "@vibesof23"
+
+# برای Render
+web = Flask(__name__)
+
+@web.route("/")
+def home():
+    return "Bot is running"
+
+
+def run_web():
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    web.run(host="0.0.0.0", port=port)
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -27,9 +42,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
     except Exception as e:
-        await update.message.reply_text(
-            f"خطا:\n{e}"
-        )
+        await update.message.reply_text(f"خطا:\n{e}")
 
 
 async def get_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -43,7 +56,7 @@ async def get_id(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 
-async def run():
+async def main():
     app = Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
@@ -59,4 +72,5 @@ async def run():
 
 
 if __name__ == "__main__":
-    asyncio.run(run())
+    threading.Thread(target=run_web).start()
+    asyncio.run(main())
