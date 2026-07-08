@@ -2,7 +2,7 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 
-TOKEN = "YOUR_NEW_TOKEN_HERE"
+TOKEN = "8800531130:AAErJJEeqldQi2GdsnLoovEyk6qRnQgzYMo"
 CHANNEL = "@vibesof23"
 
 
