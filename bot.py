@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 
 TOKEN = "8800531130:AAEil87ibT4pmUpOTg7Er8ebRty_vpwOyV4"
-CHANNEL = "@vibesof23"
+CHANNEL = "https://t.me/vibesof23"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if context.args:
